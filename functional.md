@@ -113,7 +113,16 @@ fizzbuzz(5)
 list2array(map (fizzbuzz) (range (1) (100)))
 
 ```
-  
+
+```
+fizzbuzz n
+| n `mod` 15 == 0 = 'Fizzbuzz'
+| n `mod` 3 == 0 = 'Fizz'
+| n `mod` 5 == 0 = 'Buzz'
+| otherwise = show n
+
+map fizzbuzz [1..100]
+```
 
   
   
