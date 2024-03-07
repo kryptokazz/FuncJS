@@ -1,9 +1,9 @@
 rules of functional programming:
-1: no loops
-2: no ifs
-3: no side effects 
-4: no arrays 
-5: no assignments in functions
+1. no loops
+2. no ifs
+3. no side effects 
+4. no arrays 
+5. no assignments in functions
 6. Function is a single return
 7. Functions only have 0 or 1 argument
 
@@ -13,7 +13,7 @@ function sum(i) {
 }
 
 ```
-
+```
 function add(a) {
   return function(b) {
     return a + b;
@@ -21,6 +21,8 @@ function add(a) {
 
 add => (a) => (b) => a + b 
 
+```
+```
 let pair = (first) => (second) => {
   return { 
     first: first,
@@ -33,12 +35,11 @@ pair ((10) (20))
 
   let fst = (p) => p.first
   fst (pair (10) (20))
-  10
   
   let snd = (p) => p.second
-  snd (pair (10) (20)) 
-  20
+  snd (pair (10) (20))
 
+```
   
 
   
