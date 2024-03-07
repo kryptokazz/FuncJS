@@ -13,6 +13,7 @@ let fizzBuzz = function (n) {
   
 }; 
 console.log(fizzBuzz(15))
+
 [
   '1',        '2',
   'Fizz',     '4',
