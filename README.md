@@ -13,22 +13,42 @@ let fizzBuzz = function (n) {
   
 }; 
 console.log(fizzBuzz(15))
+[
+  '1',        '2',
+  'Fizz',     '4',
+  'Buzz',     'Fizz',
+  '7',        '8',
+  'Fizz',     'Buzz',
+  '11',       'Fizz',
+  '13',       '14',
+  'FizzBuzz'
+]
+
 ```
 
 ## FizzBuzz with Functional Module
 
 ```
-
-// Import the functional module
+// Import the Functional Module
 const FunctionalModule = require('./functionalModule');
 
-// Create a range from 1 to 5
-const numbers = FunctionalModule.range(1)(5);
+// Define a range of numbers from 1 to 100
+const numbers = FunctionalModule.range(1)(15);
 
-// Map a function to double each element
-const doubledNumbers = FunctionalModule.map((x) => x * 2)(numbers);
+// Apply the fizzbuzz function to each number in the range
+const fizzbuzzResult = FunctionalModule.map((n) =>
+  n % 15 === 0 ? 'FizzBuzz'
+  : n % 3 === 0 ? 'Fizz'
+  : n % 5 === 0 ? 'Buzz'
+  : n
+)(numbers);
 
-console.log(FunctionalModule.list2array(doubledNumbers)); // Output: [2, 4, 6, 8, 10]
+// Convert the result to an array
+const fizzbuzzArray = FunctionalModule.list2array(fizzbuzzResult);
+
+// Print the result
+console.log(fizzbuzzArray.join('\n'));
+```
 
 
 
