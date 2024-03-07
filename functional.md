@@ -43,8 +43,6 @@ let pair = (first) => (second) => {
 
 pair (10) (20)
 
-  {first: 10, second: 20} 
-
   let fst = (p) => p.first
   fst (pair (10) (20))
   
@@ -52,6 +50,17 @@ pair (10) (20)
   snd (pair (10) (20))
 
 pair (3) (pair (2) (pair (1) (null)))
+
+let xs = pair (3) (pair (2) (pair (1) (null)))
+
+xs
+
+fst (xs)
+
+snd (xs) 
+
+
+
 
 ```
   
