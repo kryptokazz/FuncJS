@@ -41,7 +41,7 @@ let pair = (first) => (second) => {
   };
 }
 
-pair ((10) (20)) 
+pair (10) (20)
 
   {first: 10, second: 20} 
 
