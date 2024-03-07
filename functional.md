@@ -7,12 +7,20 @@
 6. Function is a single return
 7. Functions only have 0 or 1 argument
 
+
+# Functional Programming Rules Example
+
+
+## Recursive Sum Function
 ```
 function sum(i) {
   return i <= 0 ? i + sum(i - 1);
 }
 
 ```
+
+## Curried Addition Function
+
 ```
 function add(a) {
   return function(b) {
@@ -22,6 +30,9 @@ function add(a) {
 add => (a) => (b) => a + b 
 
 ```
+
+## Pair Function
+
 ```
 let pair = (first) => (second) => {
   return { 
@@ -39,6 +50,8 @@ pair ((10) (20))
   
   let snd = (p) => p.second
   snd (pair (10) (20))
+
+pair (3) (pair (2) (pair (1) (null)))
 
 ```
   
