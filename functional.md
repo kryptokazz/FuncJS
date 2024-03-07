@@ -114,6 +114,8 @@ list2array(map (fizzbuzz) (range (1) (100)))
 
 ```
 
+## Haskell implementation 
+
 ```
 fizzbuzz n
 | n `mod` 15 == 0 = 'Fizzbuzz'
