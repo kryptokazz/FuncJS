@@ -48,8 +48,18 @@ const fizzbuzzArray = FunctionalModule.list2array(fizzbuzzResult);
 
 // Print the result
 console.log(fizzbuzzArray.join('\n'));
+
+[
+  '1',        '2',
+  'Fizz',     '4',
+  'Buzz',     'Fizz',
+  '7',        '8',
+  'Fizz',     'Buzz',
+  '11',       'Fizz',
+  '13',       '14',
+  'FizzBuzz'
+]
+
 ```
 
 
-
-```
