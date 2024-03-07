@@ -57,10 +57,60 @@ xs
 
 fst (xs)
 
-snd (xs) 
+snd (xs)
+
+function list2array(xs) {
+    let result = [];
+     while (xs !== null) {
+        result.push(head(xs));
+        xs = tail(xs);
+}
+return result;
+
+}
+
+list2array(xs)
+
+xs
+
+function array2list(arrayLike) {
+  let result = null;
+  let xs = Array.from(arrayLike).reverse();
+  for (let i = 0; i < xs.length; ++i) {
+    result = pair (xs[i]) (result);
+    }
+return result;
+}
+
+array2list([1, 2, 3])
+array2list(list2array(xs))
+array2list("Hello")
+
+let range = (low) => (high) =>
+
+    low > high
+    ? null
+    : pair (low) (range (low + 1) (high))
+
+range (1) (100)
+
+list2array(range (1) (100))
+
+let map = (f) => (xs) =>
+  xs === null
+  ? null
+  : pair (f (head (xs))) (map (f) (tail (xs)));
+
+list2array(map ((x) => x*x ) (range (1) (10)))
+
+let fizzbuzz = (n) =>
+  ((n % 3 === 0 ? 'Fizz' : '') + (n % 5 === 0 ? 'Buzz' : '') || n);
 
 
+fizzbuzz(3)
+fizzbuzz(5)
 
+list2array(map (fizzbuzz) (range (1) (100)))
 
 ```
   
