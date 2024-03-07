@@ -1,4 +1,4 @@
-rules of functional programming:
+# Rules of Functional Programming:
 1. no loops
 2. no ifs
 3. no side effects 
