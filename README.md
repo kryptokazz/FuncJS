@@ -19,16 +19,17 @@ console.log(fizzBuzz(15))
 
 ```
 
-const FunctionalModule = require('functional-module');
+// Import the functional module
+const FunctionalModule = require('./functionalModule');
 
-const fizzbuzz = (n) =>
-  ((n % 3 === 0 ? 'Fizz' : '') + (n % 5 === 0 ? 'Buzz' : '') || n);
+// Create a range from 1 to 5
+const numbers = FunctionalModule.range(1)(5);
 
-const numbers = FunctionalModule.range(1)(100);
-const fizzbuzzResult = FunctionalModule.map(fizzbuzz)(numbers);
+// Map a function to double each element
+const doubledNumbers = FunctionalModule.map((x) => x * 2)(numbers);
 
-FunctionalModule.list2array(fizzbuzzResult).forEach((item) => {
-  console.log(item);
-});
+console.log(FunctionalModule.list2array(doubledNumbers)); // Output: [2, 4, 6, 8, 10]
+
+
 
 ```
