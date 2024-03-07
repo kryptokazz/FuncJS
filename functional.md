@@ -29,6 +29,7 @@ let pair = (first) => (second) => {
     second: second 
   };
 }
+
 pair ((10) (20)) 
 
   {first: 10, second: 20} 
